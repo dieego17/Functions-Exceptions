@@ -11,7 +11,7 @@
         <title>Ejercicios Funciones y Excepciones</title>
 
         <!-- Link to an external stylesheet located in the './css' directory -->
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="../css/index.css">
 
         <!-- Link to Bootstrap CSS library hosted on a CDN with integrity and crossorigin attributes -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -34,67 +34,56 @@
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./pages/ejercicio2.php">Ejercicio 2</a>
+                      <a class="nav-link" href="../index.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio3.php">Ejercicio 3</a>
+                      <a class="nav-link" href="../pages/ejercicio3.php">Ejercicio 3</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 4' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio4.php">Ejercicio 4</a>
+                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio4.php">Ejercicio 4</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 5' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio5.php">Ejercicio 5</a>
+                      <a class="nav-link" href="../pages/ejercicio5.php">Ejercicio 5</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 6' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio6.php">Ejercicio 6</a>
+                      <a class="nav-link" href="../pages/ejercicio6.php">Ejercicio 6</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio7.php">Ejercicio 7</a>
+                      <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="./pages/ejercicio8.php">Ejercicio 8</a>
+                      <a class="nav-link" href="../pages/ejercicio8.php">Ejercicio 8</a>
                     </li>
                 </ul>
-                <h3 class="h3">Ejercicio 2</h3>
+                <h3 class="h3">Ejercicio 4</h3>
                 <div class="section">
                     <?php
-                    
-                        function inicializar_array($numero_de_elementos, $min, $max) {
-                            if ($numero_de_elementos < 0 || $min > $max) {
-                                return null;  // Manejo de entradas inválidas
-                            }
-
-                            $array = array();
-                            for ($i = 0; $i < $numero_de_elementos; $i++) {
-                                $array[] = rand($min, $max);
-                            }
-
-                            return $array;
-                        }
-
-                        function mostrar_array($array) {
-                            echo implode(", ", $array);
-                        }
                         
-                        $numero_de_elementos = 10;
-                        $min_valor = 1;
-                        $max_valor = 100;
-                        $mi_array = inicializar_array($numero_de_elementos, $min_valor, $max_valor);
+                        function calcular_maximo ($array) {
 
-                        // Muestra el array generado
-                        mostrar_array($mi_array);
+                            $maximo = max($array);
+
+                            return $maximo;
+                        }
+
+                        $miArray = [7, 77, 10, 44];
+                        echo "El array es: ".implode(", ", $miArray)."<br>";
+
+                        $numMax = calcular_maximo($miArray);
+                        echo "El número máximo es: ".$numMax;
+                        
                     ?>
                 </div>
             </main>
