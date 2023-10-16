@@ -70,11 +70,13 @@
                 <h3 class="h3">Ejercicio 6</h3>
                 <div class="section">
                     <?php
-                        
+                        //create a function and pass it a parameter
                         function imprimir_array($array) {
+                            //creamos una tabla con dos columnas
                             echo "<table class='table'>";
                             echo "<tr><th>Posición</th><th>Valor</th></tr>";
-
+                            //do a forEach to go through the array and show each position and
+                            //value that that array has and show it in the table
                             foreach ($array as $posicion => $valor) {
                                 echo "<tr>";
                                 echo "<td>$posicion</td>";
@@ -85,8 +87,10 @@
                             echo "</table>";
                         }
 
-                        // Ejemplo de uso:
+                        //create the array and show it formatted
                         $miArray = [7, 77, 10, 44];
+                        echo "El array es: ".implode(", ", $miArray)."<br><br>";
+                        //call the function
                         imprimir_array($miArray);
 
                     ?>

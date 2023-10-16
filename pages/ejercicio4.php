@@ -70,17 +70,17 @@
                 <h3 class="h3">Ejercicio 4</h3>
                 <div class="section">
                     <?php
-                        
+                        //create a function and pass it a parameter
                         function calcular_maximo ($array) {
-
+                            //create the maximum variable in which we store the maximum value of the array
                             $maximo = max($array);
-
+                            //return the value that is stored in the maximum variable
                             return $maximo;
                         }
-
+                        //create the array and show it formatted
                         $miArray = [7, 77, 10, 44];
                         echo "El array es: ".implode(", ", $miArray)."<br>";
-
+                        //store the result of the function in a new variable and display it on the screen
                         $numMax = calcular_maximo($miArray);
                         echo "El número máximo es: ".$numMax;
                         

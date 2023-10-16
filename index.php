@@ -70,30 +70,38 @@
                 <h3 class="h3">Ejercicio 2</h3>
                 <div class="section">
                     <?php
-                    
+                        //create a function with three parameters
                         function inicializar_array($numero_de_elementos, $min, $max) {
+                            //if the number of elements is less than 0 or the minimum number is greater than the maximum
+                            //do not return anything because it cannot be done
                             if ($numero_de_elementos < 0 || $min > $max) {
-                                return null;  // Manejo de entradas inválidas
+                                return null;  
                             }
-
+                            //creamos un array vacio
                             $array = array();
+                            //se establece el array con los numeros de elementos que haya dicho el usuario
+                            //con numeros aleatorios entre un numero minimo y otro maximo que se haya establecido
                             for ($i = 0; $i < $numero_de_elementos; $i++) {
                                 $array[] = rand($min, $max);
                             }
 
                             return $array;
                         }
-
+                        //create a function to display the formatted array
                         function mostrar_array($array) {
                             echo implode(", ", $array);
                         }
                         
+                        //choose how many elements the array should have
                         $numero_de_elementos = 10;
+                        //min number of array
                         $min_valor = 1;
+                        //max number of array
                         $max_valor = 100;
+                        //call the function to generate the array
                         $mi_array = inicializar_array($numero_de_elementos, $min_valor, $max_valor);
 
-                        // Muestra el array generado
+                        //Show the generated array
                         mostrar_array($mi_array);
                     ?>
                 </div>

@@ -70,19 +70,19 @@
                 <h3 class="h3">Ejercicio 5</h3>
                 <div class="section">
                     <?php
-                        
-                        function calcular_maximo ($array) {
-
+                        //create a function and pass it a parameter
+                        function calcular_minimo ($array) {
+                            //create the minimum variable in which we store the minimum value of the array
                             $minimo = min($array);
-
+                            //return the value that is stored in the minimum variable
                             return $minimo;
                         }
-
+                        //create the array and show it formatted
                         $miArray = [7, 77, 10, 44];
                         echo "El array es: ".implode(", ", $miArray)."<br>";
-
-                        $numMin = calcular_maximo($miArray);
-                        echo "El número máximo es: ".$numMin;
+                        //store the result of the function in a new variable and display it on the screen
+                        $numMin = calcular_minimo($miArray);
+                        echo "El número mínimo es: ".$numMin;
                         
                     ?>
                 </div>

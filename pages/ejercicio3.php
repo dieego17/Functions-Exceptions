@@ -70,19 +70,23 @@
                 <h3 class="h3">Ejercicio 3</h3>
                 <div class="section">
                     <?php
-                        
-                    function calcular_media ($array) {
-                        $suma = array_sum($array);
-                        $media = $suma / count($array);
-                        
-                        return $media;
-                    }
-                    
-                    $miArray = [7, 77, 10, 44];
-                    echo "El array es: ".implode(", ", $miArray)."<br>";
-                    
-                    $media = calcular_media($miArray);
-                    echo "La media es: ".$media;
+                        //create a function that we pass a parameter to it
+                        function calcular_media ($array) {
+                            //create the sum variable that is assigned the sum of the numbers in the array
+                            $suma = array_sum($array);
+                            //create the middle variable that stores the sum divided by the number of elements of the array
+                            $media = $suma / count($array);
+                            //devuelve el resultado de media
+                            return $media;
+                        }
+                        //create the array
+                        $miArray = [7, 77, 10, 44];
+                        //show the formatted array
+                        echo "El array es: ".implode(", ", $miArray)."<br>";
+                        //create a variable where we store the result of the function
+                        $media = calcular_media($miArray);
+                        //show the result of the function
+                        echo "La media es: ".$media;
                         
                     ?>
                 </div>
