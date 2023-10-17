@@ -62,9 +62,9 @@
                       <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
-                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../pages/ejercicio8.php">Ejercicio 8</a>
+                      <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
                 <h3 class="h3">Ejercicio 6</h3>

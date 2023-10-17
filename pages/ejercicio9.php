@@ -39,7 +39,7 @@
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio3.php">Ejercicio 3</a>
+                      <a class="nav-link" href="../pages/ejercicio3.php">Ejercicio 3</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 4' -->
@@ -59,7 +59,7 @@
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
+                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
@@ -67,26 +67,10 @@
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
-                <h3 class="h3">Ejercicio 3</h3>
+                <h3 class="h3">Ejercicio 9</h3>
                 <div class="section">
                     <?php
-                        //create a function that we pass a parameter to it
-                        function calcular_media ($array) {
-                            //create the sum variable that is assigned the sum of the numbers in the array
-                            $suma = array_sum($array);
-                            //create the middle variable that stores the sum divided by the number of elements of the array
-                            $media = $suma / count($array);
-                            //devuelve el resultado de media
-                            return $media;
-                        }
-                        //create the array
-                        $miArray = [7, 77, 10, 44];
-                        //show the formatted array
-                        echo "El array es: ".implode(", ", $miArray)."<br>";
-                        //create a variable where we store the result of the function
-                        $media = calcular_media($miArray);
-                        //show the result of the function
-                        echo "La media es: ".$media;
+                        
                         
                     ?>
                 </div>

@@ -62,69 +62,41 @@
                       <a class="nav-link active" aria-current="page" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
-                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../pages/ejercicio8.php">Ejercicio 8</a>
+                      <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
                 <h3 class="h3">Ejercicio 7</h3>
                 <div class="section">
                     <?php
+                        //include the functions.php file in our project
+                        include("funciones.php");
                         
-                        //1) create a function in which we create an array with 10 elements of numbers
-                        //random between 1 and 30
-                        function nuevoArray (){
-                            $array = array();
-                            for($i = 0; $i < 10; $i++){
-                                $array[] = rand(1, 30);
-                            }
-                            
-                            return $array;
-                                    
-                        }
-                        //2) Print all values ​​of the array
-                        function mostrarArray($array){
-                            echo "El array es: ".implode(", ", $array)."<br>";
-                        }
+                        //1)
+                        //choose how many elements the array should have
+                        $numero_de_elementos = 10;
+                        //min number of array
+                        $min_valor = 1;
+                        //max number of array
+                        $max_valor = 30;
+                        //call the function to generate the array
+                        $array = inicializar_array($numero_de_elementos, $min_valor, $max_valor);
                         
+                        // call the function and pass it the parameter
+                        //2)
+                        mostrar_array($array);
                         
-                        //3) Calculate the average value of the array values
-                        function mediaArray($array){
-                            $suma = array_sum($array);
-                            $media = $suma / count($array);
-                            
-                            return $media;
-                        }
+                        //3
+                        calcular_media($array);
                         
-                        //4) Show the calculated average value
-                        function mostrarMedia($array){
-                            $media = mediaArray($array);
-                            echo "La media del array es: ".$media."<br>";
-                        }
+                        //4)
+                        mostrar_media($array);
                         
-                        
-                        //5) Show the 3 maximum values ​​of the array
-                        function valorMax ($array){
-                            rsort($array);
-                            $max = array_slice($array, 0, 3); 
-                            echo "Los 3 valores máximos del array son: ".implode(", ", $max)."<br>";
-                        }
-                        
-                        
-                        //6) Show the 3 minimum values ​​of the array
-                        function valorMin ($array){
-                            sort($array);
-                            $min = array_slice($array, 0, 3); 
-                            echo "Los 3 valores mínimos del array son: ".implode(", ", $min);
-                        }
-                        
-                        // Create the array
-                        $array = nuevoArray();
-                        
-                        // Call functions to perform operations
-                        mostrarArray($array);
-                        mostrarMedia($array);
+                        //5)
                         valorMax($array);
+                        
+                        //6)
                         valorMin($array);
                     ?>
                 </div>
