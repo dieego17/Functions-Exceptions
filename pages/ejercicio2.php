@@ -36,10 +36,10 @@
                     <li class="nav-item">
                       <a class="nav-link" href="../index.php">Ejercicio 1</a>
                     </li>
-
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../pages/ejercicio2.php">Ejercicio 2</a>
+                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -59,7 +59,7 @@
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 6' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio6.php">Ejercicio 6</a>
+                      <a class="nav-link" href="../pages/ejercicio6.php">Ejercicio 6</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
@@ -77,35 +77,42 @@
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
-                <h3 class="h3">Ejercicio 6</h3>
+                <h3 class="h3">Ejercicio 2</h3>
                 <div class="section">
                     <?php
-                        //create a function and pass it a parameter
-                        function imprimir_array($array) {
-                            //creamos una tabla con dos columnas
-                            echo "<table class='table'>";
-                            echo "<tr><th>Posición</th><th>Valor</th></tr>";
-                            //do a forEach to go through the array and show each position and
-                            //value that that array has and show it in the table
-                            foreach ($array as $posicion => $valor) {
-                                echo "<tr>";
-                                echo "<td>$posicion</td>";
-                                echo "<td>$valor</td>";
-                                echo "</tr>";
+                        //create a function with three parameters
+                        function inicializar_array($numero_de_elementos, $min, $max) {
+                            //if the number of elements is less than 0 or the minimum number is greater than the maximum
+                            //do not return anything because it cannot be done
+                            if ($numero_de_elementos < 0 || $min > $max) {
+                                return null;  
+                            }
+                            //creamos un array vacio
+                            $array = array();
+                            //se establece el array con los numeros de elementos que haya dicho el usuario
+                            //con numeros aleatorios entre un numero minimo y otro maximo que se haya establecido
+                            for ($i = 0; $i < $numero_de_elementos; $i++) {
+                                $array[] = rand($min, $max);
                             }
 
-                            echo "</table>";
+                            return $array;
                         }
-
-                        //create the array and show it formatted
-                        $miArray = [];
-                        for($i = 1; $i < 10; $i++){
-                            $miArray[] = rand(1,100);
+                        //create a function to display the formatted array
+                        function mostrar_array($array) {
+                            echo implode(", ", $array);
                         }
-                        echo "El array es: ".implode(", ", $miArray)."<br><br>";
-                        //call the function
-                        imprimir_array($miArray);
+                        
+                        //choose how many elements the array should have
+                        $numero_de_elementos = 10;
+                        //min number of array
+                        $min_valor = 1;
+                        //max number of array
+                        $max_valor = 100;
+                        //call the function to generate the array
+                        $mi_array = inicializar_array($numero_de_elementos, $min_valor, $max_valor);
 
+                        //Show the generated array
+                        mostrar_array($mi_array);
                     ?>
                 </div>
             </main>

@@ -31,10 +31,15 @@
 
                 <!-- Unordered list with Bootstrap's 'nav' and 'nav-tabs' classes -->
                 <ul class="nav nav-tabs">
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 1' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.php">Ejercicio 1</a>
+                    </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.php">Ejercicio 2</a>
+                      <a class="nav-link" href="../pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -59,19 +64,76 @@
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio7.php">Ejercicio 7</a>
+                      <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
+                    </li>
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
+                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
                 <h3 class="h3">Ejercicio 9</h3>
                 <div class="section">
+                    <h4 class="h4">Operaciones Mateáticas</h4>
                     <?php
+                        $num1 = rand(1, 50);
+                        $num2 = rand(1, 50);
+                        function sumar($num1, $num2) {
+                            if (is_numeric($num1) && is_numeric($num2)) {
+                                return $num1 + $num2;
+                            } else {
+                                throw new Exception("Los valores a sumar tienen que ser numéricos");
+                            }
+                        }
+
+                        try {
+                            $resultadoSum = sumar($num1, $num2);
+                            echo "Resultado de la suma entre $num1 y $num2 es: $resultadoSum";
+                        } catch (Exception $e) {
+                            echo "Error: " . $e->getMessage();
+                        }
+
+                        echo "<br>";
+                        function dividir($dividendo, $divisor) {
+                            if (is_numeric($dividendo) && is_numeric($divisor) && $divisor != 0) {
+                                return $dividendo / $divisor;
+                            } else {
+                                throw new Exception("Los valores al dividir tienen que ser numéricos o el divisor debe ser distinto de 0");
+                            }
+                        }
+
+                        try {
+                            $resultadoDiv = dividir($num1, $num2);
+                            echo "Resultado de la división entre $num1 y $num2: $resultadoDiv";
+                        } catch (Exception $e) {
+                            echo "Error: " . $e->getMessage();
+                        }
+
+                        echo "<br>";
                         
-                        
+                        function calcularAreaTriangulo($base, $altura) {
+                            if (is_numeric($base) && is_numeric($altura) && $base > 0 && $altura > 0) {
+                                $resultado = $base * $altura;
+                                return $resultado / 2;
+                            } else {
+                                throw new Exception("Los valores tienen que ser numéricos y positivos");
+                            }
+                        }
+
+                        try {
+                            
+                            $resultadoArea = calcularAreaTriangulo($num1, $num2);
+                            echo "Resultado del área entre $num1 y $num2: $resultadoArea";
+                        } catch (Exception $e) {
+                            echo "Error: " . $e->getMessage();
+                        }
+
+                        echo "<br>";
                     ?>
                 </div>
             </main>

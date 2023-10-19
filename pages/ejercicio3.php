@@ -31,10 +31,15 @@
 
                 <!-- Unordered list with Bootstrap's 'nav' and 'nav-tabs' classes -->
                 <ul class="nav nav-tabs">
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 1' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.php">Ejercicio 1</a>
+                    </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.php">Ejercicio 2</a>
+                      <a class="nav-link" href="../pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -62,6 +67,11 @@
                       <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
+                    </li>
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
@@ -79,8 +89,11 @@
                             //devuelve el resultado de media
                             return $media;
                         }
-                        //create the array
-                        $miArray = [7, 77, 10, 44];
+                        //create the array with random numbers
+                        $miArray = [];
+                        for($i = 1; $i < 10; $i++){
+                            $miArray[] = rand(1,100);
+                        }
                         //show the formatted array
                         echo "El array es: ".implode(", ", $miArray)."<br>";
                         //create a variable where we store the result of the function

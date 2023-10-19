@@ -31,10 +31,15 @@
 
                 <!-- Unordered list with Bootstrap's 'nav' and 'nav-tabs' classes -->
                 <ul class="nav nav-tabs">
-
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./pages/ejercicio2.php">Ejercicio 2</a>
+                      <a class="nav-link active" aria-current="page" href="./index.php">Ejercicio 1</a>
+                    </li>
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="./pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -62,47 +67,40 @@
                       <a class="nav-link" href="./pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="./public_html/index.php">Ejercicio 8</a>
+                    </li>
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
                       <a class="nav-link" href="./pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
-                <h3 class="h3">Ejercicio 2</h3>
+                <h3 class="h3">Ejercicio 1</h3>
                 <div class="section">
                     <?php
-                        //create a function with three parameters
-                        function inicializar_array($numero_de_elementos, $min, $max) {
-                            //if the number of elements is less than 0 or the minimum number is greater than the maximum
-                            //do not return anything because it cannot be done
-                            if ($numero_de_elementos < 0 || $min > $max) {
-                                return null;  
-                            }
-                            //creamos un array vacio
-                            $array = array();
-                            //se establece el array con los numeros de elementos que haya dicho el usuario
-                            //con numeros aleatorios entre un numero minimo y otro maximo que se haya establecido
-                            for ($i = 0; $i < $numero_de_elementos; $i++) {
-                                $array[] = rand($min, $max);
-                            }
-
-                            return $array;
-                        }
-                        //create a function to display the formatted array
-                        function mostrar_array($array) {
-                            echo implode(", ", $array);
+                        echo "Apartado a) <br>";
+                        
+                        function sumar ($num1, $num2, $num3, $num4, $num5){
+                            $resultado = $num1 + $num2 + $num3 + $num4 + $num5;
+                            
+                            echo "El resultado de la suma es: ".$resultado."<br>";
                         }
                         
-                        //choose how many elements the array should have
-                        $numero_de_elementos = 10;
-                        //min number of array
-                        $min_valor = 1;
-                        //max number of array
-                        $max_valor = 100;
-                        //call the function to generate the array
-                        $mi_array = inicializar_array($numero_de_elementos, $min_valor, $max_valor);
-
-                        //Show the generated array
-                        mostrar_array($mi_array);
+                        sumar(7,10,77,33,1);
+                        
+                        echo "Apartado c) <br>";
+                        function volumenCilindro ($radio, $altura){
+                            $numeroPi = 3.1416;
+                            
+                            $resultado = $radio * $radio * $numeroPi * $altura;
+                            return $resultado;
+                            
+                        }
+                        
+                        volumenCilindro(14, 4);
+                        
                     ?>
                 </div>
             </main>

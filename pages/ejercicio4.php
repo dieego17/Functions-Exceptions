@@ -31,10 +31,15 @@
 
                 <!-- Unordered list with Bootstrap's 'nav' and 'nav-tabs' classes -->
                 <ul class="nav nav-tabs">
-
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 1' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.php">Ejercicio 1</a>
+                    </li>
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.php">Ejercicio 2</a>
+                      <a class="nav-link" href="../pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -62,6 +67,11 @@
                       <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
+                    </li>
+                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
@@ -78,7 +88,10 @@
                             return $maximo;
                         }
                         //create the array and show it formatted
-                        $miArray = [7, 77, 10, 44];
+                        $miArray = [];
+                        for($i = 1; $i < 10; $i++){
+                            $miArray[] = rand(1,100);
+                        }
                         echo "El array es: ".implode(", ", $miArray)."<br>";
                         //store the result of the function in a new variable and display it on the screen
                         $numMax = calcular_maximo($miArray);

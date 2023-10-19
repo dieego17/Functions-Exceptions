@@ -59,7 +59,7 @@
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 6' -->
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../pages/ejercicio6.php">Ejercicio 6</a>
+                      <a class="nav-link" href="../pages/ejercicio6.php">Ejercicio 6</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
@@ -69,7 +69,7 @@
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
+                      <a class="nav-link  active" aria-current="page" href="../public_html/index.php">Ejercicio 8</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
@@ -77,34 +77,11 @@
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
                     </li>
                 </ul>
-                <h3 class="h3">Ejercicio 6</h3>
+                <h3 class="h3">Ejercicio 8</h3>
                 <div class="section">
                     <?php
-                        //create a function and pass it a parameter
-                        function imprimir_array($array) {
-                            //creamos una tabla con dos columnas
-                            echo "<table class='table'>";
-                            echo "<tr><th>Posición</th><th>Valor</th></tr>";
-                            //do a forEach to go through the array and show each position and
-                            //value that that array has and show it in the table
-                            foreach ($array as $posicion => $valor) {
-                                echo "<tr>";
-                                echo "<td>$posicion</td>";
-                                echo "<td>$valor</td>";
-                                echo "</tr>";
-                            }
-
-                            echo "</table>";
-                        }
-
-                        //create the array and show it formatted
-                        $miArray = [];
-                        for($i = 1; $i < 10; $i++){
-                            $miArray[] = rand(1,100);
-                        }
-                        echo "El array es: ".implode(", ", $miArray)."<br><br>";
-                        //call the function
-                        imprimir_array($miArray);
+                        
+                    include("footer.php");
 
                     ?>
                 </div>
@@ -114,3 +91,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
+

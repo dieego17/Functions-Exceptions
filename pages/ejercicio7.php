@@ -31,10 +31,15 @@
 
                 <!-- Unordered list with Bootstrap's 'nav' and 'nav-tabs' classes -->
                 <ul class="nav nav-tabs">
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 1' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.php">Ejercicio 1</a>
+                    </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 2' -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../index.php">Ejercicio 2</a>
+                      <a class="nav-link" href="../pages/ejercicio2.php">Ejercicio 2</a>
                     </li>
 
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 3' -->
@@ -60,6 +65,11 @@
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 7' -->
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="../pages/ejercicio7.php">Ejercicio 7</a>
+                    </li>
+                    
+                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
                     </li>
                     
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
