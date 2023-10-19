@@ -67,11 +67,6 @@
                       <a class="nav-link" href="./pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
-                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="./public_html/index.php">Ejercicio 8</a>
-                    </li>
-                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
                       <a class="nav-link" href="./pages/ejercicio9.php">Ejercicio 9</a>
@@ -80,26 +75,76 @@
                 <h3 class="h3">Ejercicio 1</h3>
                 <div class="section">
                     <?php
-                        echo "Apartado a) <br>";
-                        
+                        echo "APARTADO A) <br>";
+                        //Create 5 variables and assign random values ​​to each one
+                        $num1 = rand(1,50);
+                        $num2 = rand(1,50);
+                        $num3 = rand(1,50);
+                        $num4 = rand(1,50);
+                        $num5 = rand(1,50); 
+                        //Create the sum function
                         function sumar ($num1, $num2, $num3, $num4, $num5){
                             $resultado = $num1 + $num2 + $num3 + $num4 + $num5;
                             
-                            echo "El resultado de la suma es: ".$resultado."<br>";
+                            echo "El resultado de la suma es: ".$resultado."<br><br>";
                         }
+                        //Call the function
+                        sumar($num1, $num2, $num3, $num4, $num5);
                         
-                        sumar(7,10,77,33,1);
+                        echo "APARTADO B) <br>";
+                        //Create the function to divide random numbers
+                        function dividirNumerosAleatorios($numeros) {
+                            try {
+                                // Choose two random numbers for division
+                                $indiceNum1 = rand(0, 4);
+                                $indiceNum2 = rand(0, 4);
+
+                                while ($indiceNum2 == $indiceNum1) {
+                                    $indiceNum2 = rand(0, 4);
+                                }
+
+                                // Perform the division
+                                $numero1 = $numeros[$indiceNum1];
+                                $numero2 = $numeros[$indiceNum2];
+
+                                if ($numero2 == 0) {
+                                    //Create an exception in case it is divided by 0
+                                    throw new Exception("Error: División por cero");
+                                }
+
+                                $resultado = $numero1 / $numero2;
+                                return $resultado;
+                                
+                            } catch (Exception $e) {
+                                return $e->getMessage();
+                            }
+                        }
+
+                        // Generates five random integers between 0 and 9
+                        $numerosAleatorios = array();
+                        for ($i = 0; $i < 5; $i++) {
+                            $numerosAleatorios[] = rand(0, 9);
+                        }
+
+                        // Call the function to perform the division
+                        $tmp = dividirNumerosAleatorios($numerosAleatorios);
+
+                        // Shows the value of the variable $tmp
+                        echo "Resultado de la división: " . $tmp."<br><br>";
                         
-                        echo "Apartado c) <br>";
+                        
+                        echo "APARTADO C) <br>";
+                        //Create the function to calculate the volume of the cylinder
                         function volumenCilindro ($radio, $altura){
                             $numeroPi = 3.1416;
                             
-                            $resultado = $radio * $radio * $numeroPi * $altura;
+                            $resultado = $numeroPi * $radio * $radio * $altura;
                             return $resultado;
                             
                         }
-                        
-                        volumenCilindro(14, 4);
+                        //Call the function to know the result
+                        $result = volumenCilindro($num1, $num2);
+                        echo "El resultado del volumen del cilindro es: ".$result;
                         
                     ?>
                 </div>

@@ -67,11 +67,6 @@
                       <a class="nav-link" href="../pages/ejercicio7.php">Ejercicio 7</a>
                     </li>
                     
-                    <!-- List item with class 'nav-item' and a link to 'Ejercicio 8' -->
-                    <li class="nav-item">
-                      <a class="nav-link" href="../public_html/index.php">Ejercicio 8</a>
-                    </li>
-                    
                     <!-- List item with class 'nav-item' and a link to 'Ejercicio 9' -->
                     <li class="nav-item">
                       <a class="nav-link" href="../pages/ejercicio9.php">Ejercicio 9</a>
@@ -99,7 +94,7 @@
                         }
                         //create a function to display the formatted array
                         function mostrar_array($array) {
-                            echo implode(", ", $array);
+                            echo "El array es: ".implode(", ", $array);
                         }
                         
                         //choose how many elements the array should have
