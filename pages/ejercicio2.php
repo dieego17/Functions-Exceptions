@@ -82,10 +82,10 @@
                             if ($numero_de_elementos < 0 || $min > $max) {
                                 return null;  
                             }
-                            //creamos un array vacio
+                            //Create an empty array
                             $array = array();
-                            //se establece el array con los numeros de elementos que haya dicho el usuario
-                            //con numeros aleatorios entre un numero minimo y otro maximo que se haya establecido
+                            //the array is established with the numbers of elements that the user has said
+                            //with random numbers between a minimum number and a maximum number that has been established
                             for ($i = 0; $i < $numero_de_elementos; $i++) {
                                 $array[] = rand($min, $max);
                             }

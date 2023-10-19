@@ -86,10 +86,11 @@
                         function sumar ($num1, $num2, $num3, $num4, $num5){
                             $resultado = $num1 + $num2 + $num3 + $num4 + $num5;
                             
-                            echo "El resultado de la suma es: ".$resultado."<br><br>";
+                            return $resultado;
                         }
                         //Call the function
-                        sumar($num1, $num2, $num3, $num4, $num5);
+                        $result = sumar($num1, $num2, $num3, $num4, $num5);
+                        echo "El resultado de la suma es: ".$result."<br><br>";
                         
                         echo "APARTADO B) <br>";
                         //Create the function to divide random numbers

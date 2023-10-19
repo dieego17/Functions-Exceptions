@@ -123,7 +123,7 @@
                         try {
                             
                             $resultadoArea = calcularAreaTriangulo($num1, $num2);
-                            echo "Resultado del área entre $num1 y $num2: $resultadoArea";
+                            echo "Resultado del área del triángulo entre la base = $num1 y la altura = $num2 es: $resultadoArea";
                         } catch (Exception $e) {
                             echo "Error: " . $e->getMessage();
                         }
