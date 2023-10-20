@@ -74,58 +74,74 @@
                 </ul>
                 <h3 class="h3">Ejercicio 9</h3>
                 <div class="section">
-                    <h4 class="h4">Operaciones Mateáticas</h4>
+                    <h4 class="h4">Operaciones Matemáticas</h4>
                     <?php
                         $num1 = rand(1, 50);
                         $num2 = rand(1, 50);
+                        $palabra = "Hola";
                         function sumar($num1, $num2) {
                             if (is_numeric($num1) && is_numeric($num2)) {
                                 return $num1 + $num2;
                             } else {
-                                throw new Exception("Los valores a sumar tienen que ser numéricos");
+                                throw new Exception(
+                                        "<div class='alert alert-danger' role='alert'>
+                                            Los valores a sumar tienen que ser numéricos
+                                        </div>");
                             }
                         }
 
                         try {
                             $resultadoSum = sumar($num1, $num2);
+                            //$resultadoSum = sumar($palabra, $num2);
                             echo "Resultado de la suma entre $num1 y $num2 es: $resultadoSum";
                         } catch (Exception $e) {
-                            echo "Error: " . $e->getMessage();
+                            echo $e->getMessage();
                         }
 
                         echo "<br>";
+                        $num4 = rand(0, 50);
                         function dividir($dividendo, $divisor) {
                             if (is_numeric($dividendo) && is_numeric($divisor) && $divisor != 0) {
                                 return $dividendo / $divisor;
                             } else {
-                                throw new Exception("Los valores al dividir tienen que ser numéricos o el divisor debe ser distinto de 0");
+                                throw new Exception(
+                                        "<div class='alert alert-danger' role='alert'>
+                                            Los valores al dividir tienen que ser numéricos o el divisor debe ser distinto de 0
+                                        </div>");
+                                        
                             }
                         }
 
                         try {
-                            $resultadoDiv = dividir($num1, $num2);
+                            $resultadoDiv = dividir($num1, $num4);
+                            //$resultadoDiv = dividir($num1, $palabra);
                             echo "Resultado de la división entre $num1 y $num2: $resultadoDiv";
                         } catch (Exception $e) {
-                            echo "Error: " . $e->getMessage();
+                            echo $e->getMessage();
                         }
 
                         echo "<br>";
+                        
+                        $num3 = rand(-10, 50);
                         
                         function calcularAreaTriangulo($base, $altura) {
                             if (is_numeric($base) && is_numeric($altura) && $base > 0 && $altura > 0) {
                                 $resultado = $base * $altura;
                                 return $resultado / 2;
                             } else {
-                                throw new Exception("Los valores tienen que ser numéricos y positivos");
+                                throw new Exception(
+                                        "<div class='alert alert-danger' role='alert'>
+                                            Los valores tienen que ser numéricos y positivos
+                                        </div>");
                             }
                         }
 
                         try {
                             
-                            $resultadoArea = calcularAreaTriangulo($num1, $num2);
+                            $resultadoArea = calcularAreaTriangulo($num1, $num3);
                             echo "Resultado del área del triángulo entre la base = $num1 y la altura = $num2 es: $resultadoArea";
                         } catch (Exception $e) {
-                            echo "Error: " . $e->getMessage();
+                            echo $e->getMessage();
                         }
 
                         echo "<br>";
